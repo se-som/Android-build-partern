@@ -2,21 +2,6 @@ package com.example.dbfirst;
 
 import java.util.ArrayList;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -64,7 +49,6 @@ public class MainActivity extends Activity implements OnClickListener {
 				JSONObject jsonObject = new JSONObject();
 				JSONArray jsonarray = new JSONArray();
 				try {
-					jsonObject.put(Constant.User.USER_ID, 1);
 					jsonObject.put(Constant.User.USER_NAME, "A");
 					jsonObject.put(Constant.User.USER_AGE, 27);
 					jsonObject.put(Constant.User.USER_TEL, "012");
@@ -78,10 +62,6 @@ public class MainActivity extends Activity implements OnClickListener {
 					jsonarray.put(jsonObjects);
 					
 					userData = c.userObject(jsonarray);
-					
-					int dd = userData.get(1).getUserID();
-					Log.i("ONuserData", "="+userData.get(0).getUserID());
-					//Log.i("ONuserData", "="+userData.get(1).getUserID());
 					
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
